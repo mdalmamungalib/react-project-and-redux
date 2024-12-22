@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
 
 
 const ChildTwo = () => {
+  const {count} = useSelector((state) => state.counter)
   return (
     <div className="p-5 text-white border border-orange-600 rounded-lg">
       <button className="text-white rounded-full btn bg-lime-700 g">
@@ -10,7 +12,7 @@ const ChildTwo = () => {
         <button className="text-white bg-red-500 btn hover:bg-red-400">
           Decrement
         </button>
-        <h2>0</h2>
+        <h2>{count}</h2>
         <button  className="text-white bg-green-500 btn hover:bg-green-400">
           Increment
         </button>
